@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script>
+function computeGrade(){
+    var points = document.getElementById('points').value;
+    if (points <600) {
+        letterGrade = "F";
+}   else if (points <700) {
+        letterGrade = "D"
+}   else if (points <800) {
+        letterGrade = "C"
+}   else if (points <900) {
+        letterGrade = "B"
+}   else {
+        letterGrade = "A";
+    }
+    document.getElementById('computeGrade').innerHTML = "Letter Grade is =  "+letterGrade;
+    console.log (letterGrade);
+    console.log (points);
+}
+</script>
+</head>
+<body>
+    <H1>Grade Calculator</H1>
+    <br>
+    <br>
+        <p>Provide total points earned here: <input id="points" type="float" min="0" max="1000" onchange="computeGrade()"></p>
+        <br>
+        <br>
+        <h2 id="computeGrade"></h2>    
+</body>
+</html>
